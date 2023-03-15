@@ -21,14 +21,25 @@ int binarySearch(int array[], int left, int right, int item){
        return -1;
 }
 int main(){
- 
-    int array[10] = {3, 5, 7, 9, 12, 15, 16, 18, 19, 22};
-    int item = 15;
+    int n;
+    cout<<"Enter Number of elements : ";
+    cin >>n;
+    int array[n];
+    cout<<"Enter elements :";
+    for(int i=0;i<n ;i++)
+    {
+        cin>>array[i];
+    }
+    
+
+    int item;
+    cout<<"Enter Element to Find :"<<endl;
+    cin>>item;
    
-    int position = binarySearch(array, 0, 10, item);
+    int position = binarySearch(array, 0, 19, item);
 
     if(position == -1)
         cout<<"Not Found";
     else
-        cout<<"We found the item "<< item <<" at position "<< position;
+        cout<<"We found the item "<< item <<" at position "<< position<<endl;
 }
